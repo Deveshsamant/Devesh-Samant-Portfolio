@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Devesh Samant | Digital Creations & Innovations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Robot Assistant -->
+    <div id="robot-assistant" class="robot-assistant">
+        <div class="robot-body">
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-content">
+                <span class="tooltip-text">Explore my digital creations!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-tooltip="Home - Return to the main hub">Home</a>
+            <a href="about.html" class="nav-link" data-tooltip="About - Learn about my journey">About</a>
+            <a href="projects.html" class="nav-link active" data-tooltip="Projects - My digital creations">Projects</a>
+            <a href="certifications.html" class="nav-link" data-tooltip="Certifications - My professional achievements">Certifications</a>
+            <a href="hobbies.html" class="nav-link" data-tooltip="Hobbies - My gaming universe">Hobbies</a>
+            <a href="contact.html" class="nav-link" data-tooltip="Contact - Reach out to me">Contact</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" data-tooltip="Toggle between light and dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="starfield">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">My Digital Creations</span>
+                    <span class="title-subtitle">Innovation Through Code</span>
+                </h1>
+                <p class="hero-description">
+                    Welcome to my digital laboratory! Here you'll find a collection of projects that showcase 
+                    my journey through the realms of machine learning, web development, and innovative 
+                    problem-solving. Each project represents a step forward in my quest to master the digital cosmos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all" data-tooltip="Show all projects">
+                    <i class="fas fa-th"></i>
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="ml" data-tooltip="Machine Learning projects">
+                    <i class="fas fa-brain"></i>
+                    Machine Learning
+                </button>
+                <button class="filter-btn" data-filter="web" data-tooltip="Web development projects">
+                    <i class="fas fa-laptop-code"></i>
+                    Web Development
+                </button>
+                <button class="filter-btn" data-filter="mobile" data-tooltip="Mobile app projects">
+                    <i class="fas fa-mobile-alt"></i>
+                    Mobile Apps
+                </button>
+                <button class="filter-btn" data-filter="ai" data-tooltip="AI and automation projects">
+                    <i class="fas fa-robot"></i>
+                    AI & Automation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Mobile Price Prediction Project -->
+                <div class="project-card" data-category="ml" data-tooltip="ML model with 92% accuracy">
+                    <div class="project-image">
+                        <img src="mobile.jpg" alt="Mobile Price Prediction">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('mobile')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="https://github.com/Deveshsamant/Mobile-range-Prediction-using-Random-Forest" target="_blank" class="action-btn" data-tooltip="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://mobile-price.streamlit.app/" target="_blank" class="action-btn" data-tooltip="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-brain"></i>
+                            Machine Learning
+                        </div>
+                        <h3 class="project-title">Mobile Price Prediction</h3>
+                        <p class="project-description">
+                            Developed a machine learning model using Random Forest algorithm to predict mobile phone prices 
+                            with 92% accuracy. The model analyzes various features like RAM, storage, camera specs, and brand.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-chart-line"></i>
+                                <span>92% Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-database"></i>
+                                <span>10K+ Records</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hand Gesture Recognition Project -->
+                <div class="project-card" data-category="ai" data-tooltip="Real-time gesture recognition system">
+                    <div class="project-image">
+                        <img src="hand.jpg" alt="Hand Gesture Recognition">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('hand')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="action-btn" data-tooltip="Code coming soon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="showComingSoon()" data-tooltip="Demo coming soon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-robot"></i>
+                            AI & Computer Vision
+                        </div>
+                        <h3 class="project-title">Hand Gesture Recognition</h3>
+                        <p class="project-description">
+                            Real-time hand gesture recognition system using OpenCV and MediaPipe. The system can detect 
+                            and classify various hand gestures for interactive applications and accessibility features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">MediaPipe</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-hand-paper"></i>
+                                <span>10+ Gestures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Recommendation System -->
+                <div class="project-card" data-category="ml" data-tooltip="Content-based recommendation engine">
+                    <div class="project-image">
+                        <img src="movie.jpg" alt="Movie Recommendation System">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('movie')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="action-btn" data-tooltip="Code coming soon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="showComingSoon()" data-tooltip="Demo coming soon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-brain"></i>
+                            Machine Learning
+                        </div>
+                        <h3 class="project-title">Movie Recommendation System</h3>
+                        <p class="project-description">
+                            Content-based filtering recommendation system using cosine similarity. The system analyzes 
+                            movie features and user preferences to suggest personalized movie recommendations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-film"></i>
+                                <span>5000+ Movies</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>High Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Website -->
+                <div class="project-card" data-category="web" data-tooltip="This responsive portfolio website">
+                    <div class="project-image">
+                        <img src="myphoto.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('portfolio')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="https://github.com/Deveshsamant" target="_blank" class="action-btn" data-tooltip="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="index.html" class="action-btn" data-tooltip="Live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-laptop-code"></i>
+                            Web Development
+                        </div>
+                        <h3 class="project-title">Space-Themed Portfolio</h3>
+                        <p class="project-description">
+                            A responsive, interactive portfolio website with space/gaming theme. Features custom animations, 
+                            dark/light mode, and a robot assistant. Built with modern web technologies and best practices.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-palette"></i>
+                                <span>Custom Theme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Platform -->
+                <div class="project-card" data-category="web" data-tooltip="Full-stack e-commerce solution">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('ecommerce')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="action-btn" data-tooltip="Code coming soon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="showComingSoon()" data-tooltip="Demo coming soon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-laptop-code"></i>
+                            Web Development
+                        </div>
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            Full-stack e-commerce platform with user authentication, product management, 
+                            shopping cart, and payment integration. Built with modern web technologies.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>Multi-user</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payment Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather App -->
+                <div class="project-card" data-category="mobile" data-tooltip="Cross-platform weather application">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="action-btn" onclick="openProjectModal('weather')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="action-btn" data-tooltip="Code coming soon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="showComingSoon()" data-tooltip="Demo coming soon">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-mobile-alt"></i>
+                            Mobile App
+                        </div>
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-description">
+                            Cross-platform weather application with real-time data, location services, 
+                            and beautiful UI. Provides detailed weather forecasts and alerts.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Location Services</span>
+                            <span class="tech-tag">Push Notifications</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Cross-platform</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location-based</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Details</h2>
+                <button class="modal-close" onclick="closeProjectModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Project Image">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-category" id="modalCategory">
+                        <i class="fas fa-code"></i>
+                        <span>Category</span>
+                    </div>
+                    <p id="modalDescription">Project description will appear here.</p>
+                    <div class="modal-tech" id="modalTech">
+                        <!-- Technology tags will be inserted here -->
+                    </div>
+                    <div class="modal-stats" id="modalStats">
+                        <!-- Project stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modalGithub" class="btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+                <a href="#" id="modalDemo" class="btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" class="coming-soon-modal">
+        <div class="modal-content">
+            <div class="coming-soon-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h2>Coming Soon!</h2>
+            <p>This project is currently under development. Stay tuned for updates!</p>
+            <button class="btn-primary" onclick="closeComingSoon()">
+                <i class="fas fa-check"></i>
+                Got it!
+            </button>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in My Work?</h2>
+                <p>Let's collaborate and create something amazing together!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary" data-tooltip="Get in touch">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="https://github.com/Deveshsamant" target="_blank" class="btn-secondary" data-tooltip="View my code">
+                        <i class="fab fa-github"></i>
+                        View GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Devesh Samant. Exploring the digital cosmos, one line of code at a time.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Deveshsamant" target="_blank" data-tooltip="GitHub - My code repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" data-tooltip="LinkedIn - Professional network">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" data-tooltip="LeetCode - My coding challenges">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://t.me/+917820020955" target="_blank" data-tooltip="Telegram - Chat with me">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:aani64257@gmail.com" data-tooltip="Email - Send me a message">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devesh.samant/" target="_blank" data-tooltip="Instagram - Follow my journey">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

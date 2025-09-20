@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea Test - Devesh Samant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0f;
+            color: white;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .test-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 1rem;
+            background: #1a1a2e;
+            border: 1px solid #00d4ff;
+            border-radius: 0.5rem;
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            letter-spacing: normal !important;
+            word-spacing: normal !important;
+            text-transform: none !important;
+            white-space: normal !important;
+        }
+        .test-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+        }
+        .success { background: #10b981; }
+        .error { background: #f59e0b; }
+        .instructions {
+            background: #1a1a2e;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Textarea Spacing Test</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>1. Type in the textarea below</p>
+        <p>2. Try typing: "Hello world this is a test message"</p>
+        <p>3. Check if spaces appear between words</p>
+        <p>4. The result will show below</p>
+    </div>
+
+    <label for="testTextarea">Test Message (try typing with spaces):</label>
+    <textarea id="testTextarea" class="test-textarea" placeholder="Type here to test if spaces work between words..."></textarea>
+    
+    <div id="testResult" class="test-result" style="display: none;"></div>
+    
+    <script>
+        const textarea = document.getElementById('testTextarea');
+        const resultDiv = document.getElementById('testResult');
+        
+        textarea.addEventListener('input', function() {
+            const value = this.value;
+            const hasSpaces = value.includes(' ');
+            const wordCount = value.trim().split(/\s+/).filter(word => word.length > 0).length;
+            
+            resultDiv.style.display = 'block';
+            
+            if (hasSpaces && wordCount > 1) {
+                resultDiv.className = 'test-result success';
+                resultDiv.innerHTML = `
+                    ✅ SUCCESS! Spaces are working correctly!<br>
+                    Text: "${value}"<br>
+                    Word count: ${wordCount}
+                `;
+            } else if (value.length > 0) {
+                resultDiv.className = 'test-result error';
+                resultDiv.innerHTML = `
+                    ❌ Issue detected: No spaces found<br>
+                    Text: "${value}"<br>
+                    Length: ${value.length}
+                `;
+            } else {
+                resultDiv.style.display = 'none';
+            }
+        });
+        
+        // Auto-test
+        setTimeout(() => {
+            textarea.value = 'Hello world test';
+            textarea.dispatchEvent(new Event('input'));
+            setTimeout(() => {
+                if (textarea.value === 'Hello world test') {
+                    console.log('✅ Auto-test passed: Spaces work correctly');
+                } else {
+                    console.log('❌ Auto-test failed: Space issue detected');
+                }
+                textarea.value = '';
+                resultDiv.style.display = 'none';
+            }, 2000);
+        }, 1000);
+    </script>
+</body>
+</html>

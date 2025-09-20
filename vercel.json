@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "devesh-samant-portfolio",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.{css,js,html}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.{png,jpg,jpeg,gif,svg,webp,ico,pdf}",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|svg|webp|ico|pdf))$",
+      "dest": "/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

@@ -1,0 +1,142 @@
+/* IMAGE FALLBACK SYSTEM */
+/* This CSS provides fallback styles when images fail to load */
+
+/* General image fallback */
+img {
+    background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+/* Fallback content for broken images */
+img[alt]::after {
+    content: attr(alt);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Orbitron', monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: pre-line;
+    width: 90%;
+    z-index: 1;
+}
+
+/* Show fallback text when image fails to load */
+img[alt]:not([src]),
+img[alt][src=""],
+img[alt][src="#"] {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img[alt]:not([src])::after,
+img[alt][src=""]::after,
+img[alt][src="#"]::after {
+    opacity: 1;
+}
+
+/* Specific fallbacks for different image types */
+
+/* Profile images */
+img[alt*="Devesh Samant"],
+img[src*="myphoto"] {
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 50%;
+}
+
+/* Project images */
+img[alt*="Price Prediction"],
+img[alt*="Hand Gesture"],
+img[alt*="Movie Recommendation"],
+img[alt*="Portfolio Website"] {
+    min-width: 400px;
+    min-height: 250px;
+    border-radius: 12px;
+}
+
+/* Certification images */
+img[alt*="Certification"] {
+    min-width: 350px;
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+/* Gaming images */
+img[alt*="Valorant"],
+img[alt*="Clash Royale"] {
+    min-width: 500px;
+    min-height: 300px;
+    border-radius: 15px;
+}
+
+/* University images */
+img[alt*="University"],
+img[alt*="Graphic Era"] {
+    min-width: 400px;
+    min-height: 250px;
+    border-radius: 10px;
+}
+
+/* Loading state animation */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+img:not([src]),
+img[src=""],
+img[src="#"] {
+    background: linear-gradient(
+        90deg, 
+        rgba(0, 212, 255, 0.1) 0%, 
+        rgba(0, 212, 255, 0.3) 50%, 
+        rgba(0, 212, 255, 0.1) 100%
+    );
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* Error message for debugging */
+.image-error {
+    background: rgba(255, 107, 53, 0.1);
+    border: 2px dashed #ff6b35;
+    color: #ff6b35;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Orbitron', monospace;
+    margin: 1rem 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    img[alt]::after {
+        font-size: 0.8rem;
+    }
+    
+    img[alt*="Devesh Samant"],
+    img[src*="myphoto"] {
+        min-width: 200px;
+        min-height: 200px;
+    }
+    
+    img[alt*="Price Prediction"],
+    img[alt*="Hand Gesture"],
+    img[alt*="Movie Recommendation"],
+    img[alt*="Portfolio Website"] {
+        min-width: 300px;
+        min-height: 200px;
+    }
+}

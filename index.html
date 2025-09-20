@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devesh Samant - Space Explorer & Code Warrior</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="image-fallback.css">
+</head>
+<body>
+    <!-- Cosmic Loader -->
+    <div id="cosmic-loader" class="cosmic-loader">
+        <div class="warp-tunnel">
+            <div class="stars"></div>
+            <div class="stars"></div>
+            <div class="stars"></div>
+        </div>
+        
+        <!-- Gaming Icons Animation -->
+        <div class="gaming-icons">
+            <!-- Rockets -->
+            <div class="gaming-icon rocket" style="--delay: 0s; --orbit: 150px;">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="gaming-icon rocket" style="--delay: 1s; --orbit: 180px;">
+                <i class="fas fa-rocket"></i>
+            </div>
+            
+            <!-- Gaming Console -->
+            <div class="gaming-icon console" style="--delay: 0.5s; --orbit: 200px;">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="gaming-icon console" style="--delay: 1.5s; --orbit: 120px;">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            
+            <!-- Laptops -->
+            <div class="gaming-icon laptop" style="--delay: 0.3s; --orbit: 170px;">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="gaming-icon laptop" style="--delay: 1.3s; --orbit: 220px;">
+                <i class="fas fa-laptop"></i>
+            </div>
+        </div>
+        
+        <div class="loader-content">
+            <div class="terminal-text">
+                <span class="terminal-prompt">$</span>
+                <span class="typing-text" id="typing-text">Booting Portfolio.exe...</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Robot Assistant -->
+    <div id="robot-assistant" class="robot-assistant">
+        <div class="robot-body">
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-content">
+                <span class="tooltip-text">Welcome to my cosmic portfolio!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active" data-tooltip="Home - My cosmic journey begins here">Home</a>
+            <a href="about.html" class="nav-link" data-tooltip="About - Learn about my space exploration mission">About</a>
+            <a href="projects.html" class="nav-link" data-tooltip="Projects - Discover my digital creations">Projects</a>
+            <a href="certifications.html" class="nav-link" data-tooltip="Certifications - My professional achievements">Certifications</a>
+            <a href="hobbies.html" class="nav-link" data-tooltip="Hobbies - My gaming universe">Hobbies</a>
+            <a href="contact.html" class="nav-link" data-tooltip="Contact - Reach out to this space explorer">Contact</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" data-tooltip="Toggle between light and dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="starfield">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Devesh Samant</span>
+                    <span class="title-subtitle">Space Explorer & Code Warrior</span>
+                </h1>
+                <div class="typewriter-container">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    B.Tech Computer Science student on a mission to explore the digital cosmos. 
+                    Passionate about creating stellar solutions through code, machine learning, 
+                    and pushing the boundaries of what's possible in the tech universe.
+                </p>
+                
+                <div class="tech-stack">
+                    <div class="tech-item" data-tooltip="C++ - My first programming language">
+                        <i class="devicon-cplusplus-plain"></i>
+                        <span>C++</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Python - My go-to for AI and automation">
+                        <i class="devicon-python-plain"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="React - Building dynamic user interfaces">
+                        <i class="devicon-react-original"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Node.js - Powering the backend universe">
+                        <i class="devicon-nodejs-plain"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Machine Learning - Teaching computers to think">
+                        <i class="fas fa-brain"></i>
+                        <span>ML</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="window.open('resume.pdf', '_blank')" data-tooltip="Download my mission report">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('about')" data-tooltip="Learn more about my journey">
+                        <i class="fas fa-rocket"></i>
+                        Explore More
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="myphoto.jpg" alt="Devesh Samant - Space Explorer">
+                        </div>
+                        <div class="profile-glow"></div>
+                    </div>
+                    <div class="social-links-container">
+                        <!-- GitHub -->
+                        <a href="https://github.com/Deveshsamant" target="_blank" class="social-link social-github" data-tooltip="GitHub - My code repository">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" class="social-link social-linkedin" data-tooltip="LinkedIn - Professional network">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        
+                        <!-- LeetCode -->
+                        <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" class="social-link social-leetcode" data-tooltip="LeetCode - My coding challenges">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        
+                        <!-- Telegram -->
+                        <a href="https://t.me/+917820020955" target="_blank" class="social-link social-telegram" data-tooltip="Telegram - Chat with me">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:aani64257@gmail.com" class="social-link social-email" data-tooltip="Email - Send me a message">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/devesh.samant/" target="_blank" class="social-link social-instagram" data-tooltip="Instagram - Follow my journey">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                        <!-- Twitter -->
+                        <a href="https://x.com/DeveshSama32978?t=3ZEb0YjtYfHMk30saT-AXA&s=09" target="_blank" class="social-link social-twitter" data-tooltip="Twitter - My thoughts and updates">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/919876543210" target="_blank" class="social-link social-whatsapp" data-tooltip="WhatsApp - Chat with me">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming & CS Animation Section -->
+    <section id="gaming-cs-showcase" class="gaming-cs-showcase">
+        <div class="container">
+            <h2 class="section-title">Code • Create • Innovate</h2>
+            <div class="showcase-content">
+                <!-- Frontend Development -->
+                <div class="frontend-zone">
+                    <div class="zone-header">
+                        <div class="zone-icon frontend-icon-header">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>Frontend Mastery</h3>
+                        <p class="zone-subtitle">Crafting beautiful user experiences</p>
+                    </div>
+                    
+                    <!-- Tech Stack Display -->
+                    <div class="tech-stack-card">
+                        <div class="stack-header">
+                            <div class="stack-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <span class="stack-text">TECH STACK</span>
+                        </div>
+                        <div class="stack-technologies">
+                            <div class="tech-badge react">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-badge js">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-badge html">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-badge css">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                        <div class="experience-bar">
+                            <div class="experience-fill"></div>
+                            <span class="experience-text">Frontend Expert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend Stats -->
+                    <div class="frontend-stats">
+                        <div class="stat-frontend">
+                            <div class="stat-icon"><i class="fas fa-palette"></i></div>
+                            <div class="stat-value">Creative</div>
+                            <div class="stat-label">Design</div>
+                        </div>
+                        <div class="stat-frontend">
+                            <div class="stat-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="stat-value">Responsive</div>
+                            <div class="stat-label">Design</div>
+                        </div>
+                        <div class="stat-frontend">
+                            <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="stat-value">Fast</div>
+                            <div class="stat-label">Performance</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center Animation -->
+                <div class="center-animation">
+                    <div class="code-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">devesh@portfolio:~$</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="command typing-command">./run_portfolio.sh</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="output">Initializing gaming mode...</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="output success">✓ Valorant skills loaded</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="output success">✓ Coding abilities activated</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="output info">Ready for digital adventures!</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="cursor-blink">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Code Elements -->
+                    <div class="floating-elements">
+                        <div class="floating-icon code-icon" style="--delay: 0s; --duration: 3s;">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="floating-icon code-icon" style="--delay: 1s; --duration: 4s;">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="floating-icon code-icon" style="--delay: 2s; --duration: 3.5s;">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="floating-icon code-icon" style="--delay: 0.5s; --duration: 4.5s;">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="floating-icon code-icon" style="--delay: 1.5s; --duration: 3.2s;">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="floating-icon code-icon" style="--delay: 2.5s; --duration: 4.2s;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Development -->
+                <div class="backend-zone">
+                    <div class="zone-header">
+                        <div class="zone-icon backend-icon-header">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Expertise</h3>
+                        <p class="zone-subtitle">Building robust server solutions</p>
+                    </div>
+                    
+                    <!-- Skills Matrix -->
+                    <div class="skills-matrix">
+                        <div class="matrix-row">
+                            <div class="skill-node active" data-skill="Python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-node active" data-skill="JavaScript">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-node" data-skill="C++">
+                                <i class="fab fa-cuttlefish"></i>
+                            </div>
+                        </div>
+                        <div class="matrix-row">
+                            <div class="skill-node active" data-skill="React">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-node" data-skill="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill-node active" data-skill="AI/ML">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievement Unlocked -->
+                    <div class="achievement-popup">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-text">
+                            <div class="achievement-title">Achievement Unlocked!</div>
+                            <div class="achievement-desc">Full Stack Developer</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Stats -->
+                    <div class="backend-stats">
+                        <div class="stat-backend">
+                            <div class="stat-icon"><i class="fas fa-server"></i></div>
+                            <div class="stat-value">Scalable</div>
+                            <div class="stat-label">APIs</div>
+                        </div>
+                        <div class="stat-backend">
+                            <div class="stat-icon"><i class="fas fa-database"></i></div>
+                            <div class="stat-value">Efficient</div>
+                            <div class="stat-label">Databases</div>
+                        </div>
+                        <div class="stat-backend">
+                            <div class="stat-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="stat-value">Cloud</div>
+                            <div class="stat-label">Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Devesh Samant. Exploring the digital cosmos, one line of code at a time.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Deveshsamant" target="_blank" data-tooltip="GitHub - My code repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" data-tooltip="LinkedIn - Professional network">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" data-tooltip="LeetCode - My coding challenges">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://t.me/+917820020955" target="_blank" data-tooltip="Telegram - Chat with me">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:aani64257@gmail.com" data-tooltip="Email - Send me a message">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devesh.samant/" target="_blank" data-tooltip="Instagram - Follow my journey">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

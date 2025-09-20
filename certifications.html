@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Devesh Samant | Professional Achievements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="certifications.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Robot Assistant -->
+    <div id="robot-assistant" class="robot-assistant">
+        <div class="robot-body">
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-content">
+                <span class="tooltip-text">Explore my professional achievements!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-tooltip="Home - Return to the main hub">Home</a>
+            <a href="about.html" class="nav-link" data-tooltip="About - Learn about my journey">About</a>
+            <a href="projects.html" class="nav-link" data-tooltip="Projects - My digital creations">Projects</a>
+            <a href="certifications.html" class="nav-link active" data-tooltip="Certifications - My professional achievements">Certifications</a>
+            <a href="hobbies.html" class="nav-link" data-tooltip="Hobbies - My gaming universe">Hobbies</a>
+            <a href="contact.html" class="nav-link" data-tooltip="Contact - Reach out to me">Contact</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" data-tooltip="Toggle between light and dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="certifications-hero">
+        <div class="starfield">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">Professional Certifications</span>
+                    <span class="title-subtitle">Validating My Digital Expertise</span>
+                </h1>
+                <p class="hero-description">
+                    Welcome to my certification showcase! These credentials represent my commitment to continuous 
+                    learning and professional development in the ever-evolving world of technology. Each certificate 
+                    is a milestone in my journey through the digital cosmos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Content -->
+    <section class="certifications-content">
+        <div class="container">
+            <!-- Certification Categories -->
+            <div class="certification-filters">
+                <button class="filter-btn active" data-filter="all" data-tooltip="Show all certifications">
+                    <i class="fas fa-th"></i>
+                    All Certifications
+                </button>
+                <button class="filter-btn" data-filter="programming" data-tooltip="Programming certifications">
+                    <i class="fas fa-code"></i>
+                    Programming
+                </button>
+                <button class="filter-btn" data-filter="web" data-tooltip="Web development certifications">
+                    <i class="fas fa-laptop-code"></i>
+                    Web Development
+                </button>
+                <button class="filter-btn" data-filter="mobile" data-tooltip="Mobile development certifications">
+                    <i class="fas fa-mobile-alt"></i>
+                    Mobile Development
+                </button>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="certifications-grid" id="certificationsGrid">
+                <!-- Python Certification -->
+                <div class="certification-card" data-category="programming" data-tooltip="Google & Coursera Python certification">
+                    <div class="cert-image">
+                        <img src="python.jpg" alt="Python Certification">
+                        <div class="cert-overlay">
+                            <div class="cert-actions">
+                                <button class="action-btn" onclick="openCertModal('python')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="https://www.coursera.org/verify/LES49221JBAH" target="_blank" class="action-btn" data-tooltip="Verify online">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="python.pdf" target="_blank" class="action-btn" data-tooltip="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-category">
+                            <i class="fas fa-code"></i>
+                            Programming
+                        </div>
+                        <h3 class="cert-title">Crash Course on Python</h3>
+                        <p class="cert-issuer">Google & Coursera</p>
+                        <p class="cert-description">
+                            Intensive course on Python programming fundamentals covering data structures, 
+                            functions, and object-oriented programming concepts.
+                        </p>
+                        <div class="cert-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Programming</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="cert-stats">
+                            <div class="stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>40 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Certification -->
+                <div class="certification-card" data-category="web" data-tooltip="Udemy full-stack web development course">
+                    <div class="cert-image">
+                        <img src="web.jpg" alt="Web Development Certification">
+                        <div class="cert-overlay">
+                            <div class="cert-actions">
+                                <button class="action-btn" onclick="openCertModal('web')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="https://www.udemy.com/certificate/UC-a3a88382-d387-4a2e-93e2-c707ea7586d6/" target="_blank" class="action-btn" data-tooltip="Verify online">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="web.pdf" target="_blank" class="action-btn" data-tooltip="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-category">
+                            <i class="fas fa-laptop-code"></i>
+                            Web Development
+                        </div>
+                        <h3 class="cert-title">The Web Developer Bootcamp 2024</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-description">
+                            Comprehensive full-stack web development course covering front-end and back-end 
+                            technologies, databases, and deployment strategies.
+                        </p>
+                        <div class="cert-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="cert-stats">
+                            <div class="stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>60+ Hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android & Kotlin Certification -->
+                <div class="certification-card" data-category="mobile" data-tooltip="Udemy Android app development course">
+                    <div class="cert-image">
+                        <img src="kotlin.jpg" alt="Android & Kotlin Certification">
+                        <div class="cert-overlay">
+                            <div class="cert-actions">
+                                <button class="action-btn" onclick="openCertModal('kotlin')" data-tooltip="View details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="https://www.udemy.com/certificate/UC-c05bfd05-f93c-4876-9b84-7fd8f10dc039/" target="_blank" class="action-btn" data-tooltip="Verify online">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="kotlin.pdf" target="_blank" class="action-btn" data-tooltip="Download PDF">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-category">
+                            <i class="fas fa-mobile-alt"></i>
+                            Mobile Development
+                        </div>
+                        <h3 class="cert-title">Android & Kotlin Development Masterclass</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-description">
+                            Comprehensive course on Android app development using Kotlin, covering UI design, 
+                            data persistence, networking, and app deployment.
+                        </p>
+                        <div class="cert-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">Mobile Development</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                        <div class="cert-stats">
+                            <div class="stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>50+ Hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Modal -->
+    <div id="certModal" class="cert-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Certification Details</h2>
+                <button class="modal-close" onclick="closeCertModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Certification Image">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-category" id="modalCategory">
+                        <i class="fas fa-certificate"></i>
+                        <span>Category</span>
+                    </div>
+                    <div class="modal-issuer" id="modalIssuer">Issuer</div>
+                    <p id="modalDescription">Certification description will appear here.</p>
+                    <div class="modal-tech" id="modalTech">
+                        <!-- Technology tags will be inserted here -->
+                    </div>
+                    <div class="modal-stats" id="modalStats">
+                        <!-- Certification stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modalVerify" class="btn-secondary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    Verify Online
+                </a>
+                <a href="#" id="modalDownload" class="btn-primary" target="_blank">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" class="coming-soon-modal">
+        <div class="modal-content">
+            <div class="coming-soon-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h2>Coming Soon!</h2>
+            <p>This certification is currently in progress. Stay tuned for updates!</p>
+            <button class="btn-primary" onclick="closeComingSoon()">
+                <i class="fas fa-check"></i>
+                Got it!
+            </button>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in My Skills?</h2>
+                <p>Let's discuss how my certifications and expertise can contribute to your projects!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary" data-tooltip="Get in touch">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="projects.html" class="btn-secondary" data-tooltip="See my work">
+                        <i class="fas fa-eye"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Devesh Samant. Exploring the digital cosmos, one line of code at a time.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Deveshsamant" target="_blank" data-tooltip="GitHub - My code repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" data-tooltip="LinkedIn - Professional network">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" data-tooltip="LeetCode - My coding challenges">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://t.me/+917820020955" target="_blank" data-tooltip="Telegram - Chat with me">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:aani64257@gmail.com" data-tooltip="Email - Send me a message">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devesh.samant/" target="_blank" data-tooltip="Instagram - Follow my journey">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="certifications.js"></script>
+</body>
+</html>

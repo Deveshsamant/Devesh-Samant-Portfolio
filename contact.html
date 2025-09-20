@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Devesh Samant | Let's Connect in the Digital Cosmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="textarea-fix.css">
+<style>/* URGENT TEXTAREA FIX */ #message,textarea[name="message"],.form-group textarea{letter-spacing:normal!important;word-spacing:normal!important;text-transform:none!important;white-space:normal!important;font-feature-settings:normal!important;font-variant:normal!important;}</style></head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Robot Assistant -->
+    <div id="robot-assistant" class="robot-assistant">
+        <div class="robot-body">
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-content">
+                <span class="tooltip-text">Let's connect and explore together!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">DS</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-tooltip="Home - Return to the main hub">Home</a>
+            <a href="about.html" class="nav-link" data-tooltip="About - Learn about my journey">About</a>
+            <a href="projects.html" class="nav-link" data-tooltip="Projects - My digital creations">Projects</a>
+            <a href="certifications.html" class="nav-link" data-tooltip="Certifications - My professional achievements">Certifications</a>
+            <a href="hobbies.html" class="nav-link" data-tooltip="Hobbies - My gaming universe">Hobbies</a>
+            <a href="contact.html" class="nav-link active" data-tooltip="Contact - Let's connect">Contact</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" data-tooltip="Toggle between light and dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="starfield">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">Let's Connect</span>
+                    <span class="title-subtitle">Join Me in the Digital Cosmos</span>
+                </h1>
+                <p class="hero-description">
+                    Ready to embark on a journey through the digital universe together? Whether you're interested 
+                    in collaborating on a project, discussing technology, or just want to say hello, I'd love to 
+                    hear from you. Let's explore the infinite possibilities of code and innovation!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h2 class="section-title">Send a Message</h2>
+                        <p class="section-description">
+                            Have a project in mind? Want to collaborate? Or just want to chat about technology? 
+                            Drop me a message and I'll get back to you as soon as possible!
+                        </p>
+                        
+                        <form id="contactForm" class="contact-form" action="https://formsubmit.co/aani64257@gmail.com" method="POST" target="_blank">
+                            <!-- FormSubmit.co Configuration -->
+                            <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio - Devesh Samant">
+                            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_autoresponse" value="Thank you for contacting Devesh Samant! Your message has been received and I'll get back to you as soon as possible.">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required data-tooltip="Your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required data-tooltip="Your last name">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required data-tooltip="Your email address">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required data-tooltip="What's this about?">
+                                    <option value="">Select a subject</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="project">Project Discussion</option>
+                                    <option value="job">Job Opportunity</option>
+                                    <option value="question">Technical Question</option>
+                                    <option value="feedback">Website Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required data-tooltip="Tell me what's on your mind" placeholder="Write your message here" style="all: unset !important; display: block !important; width: 100% !important; min-height: 120px !important; padding: 12px !important; background-color: #1a1a2e !important; border: 1px solid rgba(0, 212, 255, 0.3) !important; border-radius: 8px !important; color: #ffffff !important; font-family: 'Exo 2', sans-serif !important; font-size: 16px !important; line-height: 1.5 !important; white-space: pre-wrap !important; word-spacing: 0 !important; letter-spacing: 0 !important; text-transform: none !important; cursor: text !important; resize: vertical !important; box-sizing: border-box !important; outline: none !important;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary submit-btn" data-tooltip="Send your message">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-description">
+                        Prefer other ways to connect? Here are all the ways you can reach me across the digital universe.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method" data-tooltip="Send me an email">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Email</h3>
+                                <p>aani64257@gmail.com</p>
+                                <a href="mailto:aani64257@gmail.com" class="method-link">Send Email</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="Connect on LinkedIn">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>LinkedIn</h3>
+                                <p>Professional Network</p>
+                                <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" class="method-link">Connect</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="Check out my code">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>GitHub</h3>
+                                <p>Code Repository</p>
+                                <a href="https://github.com/Deveshsamant" target="_blank" class="method-link">View Profile</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="Follow my journey">
+                            <div class="method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Instagram</h3>
+                                <p>Personal Updates</p>
+                                <a href="https://www.instagram.com/devesh.samant/" target="_blank" class="method-link">Follow</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="WhatsApp me">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>WhatsApp</h3>
+                                <p>+91 7820020955</p>
+                                <a href="https://wa.me/917820020955" target="_blank" class="method-link">Message</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="Chat on Telegram">
+                            <div class="method-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Telegram</h3>
+                                <p>+91 7820020955</p>
+                                <a href="https://t.me/+917820020955" target="_blank" class="method-link">Chat Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="View my coding challenges">
+                            <div class="method-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>LeetCode</h3>
+                                <p>Coding Challenges</p>
+                                <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" class="method-link">View Profile</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-tooltip="Join my Discord server">
+                            <div class="method-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="method-content">
+                                <h3>Discord</h3>
+                                <p>Community Server</p>
+                                <a href="https://discord.gg/P6gxsv3k" target="_blank" class="method-link">Join Server</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="quick-stats">
+                        <h3>Quick Stats</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Response Time</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Response Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label">Enthusiasm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">My Location</h2>
+            <p class="section-description">
+                Based in the beautiful city of Dehradun, India, but always ready to work with people from around the world!
+            </p>
+            
+            <div class="location-info">
+                <div class="location-details">
+                    <div class="location-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Current Location</h4>
+                            <p>Dehradun, Uttarakhand, India</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>University</h4>
+                            <p>Graphic Era Hill University</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Time Zone</h4>
+                            <p>IST (UTC+5:30)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    <i class="fas fa-map"></i>
+                    <p>Interactive Map Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">
+                Got questions? Here are some answers to common queries about working with me.
+            </p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What kind of projects do you work on?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I work on a wide range of projects including web development, machine learning applications, mobile apps, and automation tools. I'm particularly interested in projects that involve AI, space technology, and innovative solutions to real-world problems.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are you available for freelance work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I'm always open to interesting freelance opportunities. Whether it's a small project or a long-term collaboration, I'd love to discuss how we can work together to bring your ideas to life.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What's your preferred communication method?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I'm flexible with communication methods! Email is great for detailed discussions, while WhatsApp or Discord work well for quick chats. For video calls, I'm comfortable with any platform you prefer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly do you respond to messages?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I typically respond within 24 hours, often much sooner. I check my messages regularly and prioritize responding to inquiries about potential collaborations and projects.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer mentorship or guidance?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! I believe in giving back to the community. I'm happy to provide guidance on programming, career advice, or just chat about technology and space exploration. Feel free to reach out!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's turn your ideas into reality and explore the digital cosmos together!</p>
+                <div class="cta-buttons">
+                    <a href="#contactForm" class="btn-primary" data-tooltip="Send me a message">
+                        <i class="fas fa-paper-plane"></i>
+                        Start a Conversation
+                    </a>
+                    <a href="projects.html" class="btn-secondary" data-tooltip="See my work">
+                        <i class="fas fa-eye"></i>
+                        View My Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Devesh Samant. Exploring the digital cosmos, one line of code at a time.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Deveshsamant" target="_blank" data-tooltip="GitHub - My code repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devesh-samant-b78376258/" target="_blank" data-tooltip="LinkedIn - Professional network">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/deveshsamant1744/" target="_blank" data-tooltip="LeetCode - My coding challenges">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://t.me/+917820020955" target="_blank" data-tooltip="Telegram - Chat with me">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:aani64257@gmail.com" data-tooltip="Email - Send me a message">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devesh.samant/" target="_blank" data-tooltip="Instagram - Follow my journey">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Message Sent Successfully!</h2>
+            <p>Thank you for reaching out! I'll get back to you as soon as possible.</p>
+            <button class="btn-primary" onclick="closeSuccessModal()">
+                <i class="fas fa-check"></i>
+                Got it!
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    <script src="textarea-fix.js"></script>
+    
+    <!-- Fix for contact form issues -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix textarea spacing issues - COMPREHENSIVE FIX
+            const textarea = document.getElementById('message');
+            if (textarea) {
+                // Reset all text formatting properties
+                textarea.style.letterSpacing = 'normal';
+                textarea.style.wordSpacing = 'normal';
+                textarea.style.textTransform = 'none';
+                textarea.style.whiteSpace = 'normal';
+                textarea.style.fontFeatureSettings = 'normal';
+                textarea.style.fontVariant = 'normal';
+                textarea.style.textRendering = 'auto';
+                
+                // Additional event listeners to maintain normal behavior
+                textarea.addEventListener('input', function(e) {
+                    // Ensure the value maintains normal spacing
+                    const value = e.target.value;
+                    if (value !== e.target.value) {
+                        e.target.value = value;
+                    }
+                });
+                
+                // Override any CSS that might interfere
+                textarea.addEventListener('focus', function() {
+                    this.style.letterSpacing = 'normal';
+                    this.style.wordSpacing = 'normal';
+                    this.style.textTransform = 'none';
+                    this.style.whiteSpace = 'normal';
+                });
+                
+
+            }
+            
+            // Ensure form submits properly to FormSubmit.co
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    console.log('📧 Form submitting to FormSubmit.co for aani64257@gmail.com');
+                    
+                    // Show loading state
+                    const submitBtn = form.querySelector('.submit-btn');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                        submitBtn.disabled = true;
+                    }
+                    
+                    // Don't prevent default - let FormSubmit.co handle it
+                    // The form will submit naturally and email will be sent
+                });
+            }
+        });
+    </script>
+</body>
+</html>
